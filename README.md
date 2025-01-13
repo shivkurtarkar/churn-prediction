@@ -14,9 +14,8 @@
   - [Instructions for Running the Application](#instructions-for-running-the-application)
 
 - [Model Evaluation](#model-evaluation)
-- [Deliverables](#deliverables)
+- [Docker Kubernetes Deployment](#docker-kubernetes-deployment)
 - [Further Development](#further-development)
-- [TODO](#todo)
 
 - [Project Evaluation](#project-evaluation)
 
@@ -334,13 +333,9 @@ Train Log Loss: 0.0612
 Test Log Loss: 0.3646
 ```
 
-## Deliverables
+## Docker Kubernetes Deployment
 
-*   `README.md`: This file.
-*   `notebook.ipynb`: Jupyter Notebook with data preparation, EDA, and model development.
-*   `train.py`: Python script for training the final model.
-*   `Dockerfile`: Dockerfile for deployment.
-*   `requirements.txt`: List of dependencies.
+- [TODO]
 
 ## Further Development
 
@@ -351,27 +346,6 @@ Future work could include:
 *   Integrating the model into a production environment.
 *   Deploying the service to the cloud.
 
-
-## TODO
-
-- Problem description
-- Data Description
-- Data extraction and challenges
-- Model development
-    - EDA
-    - model evaluation
-- productionization
-    - explaination of architecture
-    - running service
-    - dashboard
-        -   Identifying customers at risk of churning.
-        - Gaining insights into user behavior and churn patterns.
-        - Enabling data-driven decisions to optimize customer retention efforts.
-
-    - monitoring
-- cicd
-    - explaination
-    - instructions
 
 # Project Evaluation  
 ```
