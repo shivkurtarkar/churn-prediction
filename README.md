@@ -10,8 +10,8 @@
 - [Project Directory](#project-directory)
 
 - [Steps for Running Model Development Scripts](#steps-for-running-model-development-scripts)
-  - [Instructions For EDA and Model Dev](#instructions-for-eda-and-model-dev)
-  - [Instructions for Running the Application](#instructions-for-running-the-application)
+
+- [Instructions for Running the Application](#instructions-for-running-the-application)
 
 - [Model Evaluation](#model-evaluation)
 - [Docker Kubernetes Deployment](#docker-kubernetes-deployment)
@@ -117,9 +117,9 @@ Download and organize the dataset as follows:
     /frontend                 # Streamlit application to consume the API  
 ```
 
-# Steps for Running Model Development Scripts
+## Steps for Running Model Development Scripts
 
-## 1. **Set Up the Environment**
+### 1. **Set Up the Environment**
 
 1.1 **Create a Virtual Environment**  
    Run the following command to create a virtual environment. Replace `myenv` with your desired environment name:  
@@ -151,7 +151,7 @@ Download and organize the dataset as follows:
 
 ---
 
-## 2. **Prepare the Dataset**
+### 2. **Prepare the Dataset**
 
 2.1 **Download Dataset Files**  
    Place the required dataset files in the `/data` directory. Ensure all files are correctly named and formatted as per project requirements.  
@@ -161,7 +161,7 @@ Download and organize the dataset as follows:
 
 ---
 
-## 3. **Exploratory Data Analysis (EDA)**
+### 3. **Exploratory Data Analysis (EDA)**
 
 3.1 **Navigate to the EDA Folder**  
    Change to the directory where the EDA notebooks are located:  
@@ -177,7 +177,7 @@ Download and organize the dataset as follows:
 
 ---
 
-## 4. **Train the Model**
+### 4. **Train the Model**
 
 4.1 **Navigate to the Modeling Folder**  
    Switch to the directory containing the modeling scripts and notebooks:  
@@ -212,27 +212,6 @@ Download and organize the dataset as follows:
      python train_v5_2.py
      ```
 
-
-## Instructions For EDA and Model dev
-
-1. **Prepare the Dataset**  
-   - Download the dataset files listed above and place them in the `/data` directory. 
-   **refer Dataset Setup or KKBOX Churn Prediction Challenge on Kaggle**
-
-2. **Update File Paths**  
-   - Check and update the file path variables in the notebooks or scripts as needed to ensure they point to the `/data` directory.
-
-3. **Run EDA Notebooks**  
-   - Navigate to the `/notebooks/eda` folder.  
-   - Open and run `eda_dask4.ipynb` for Exploratory Data Analysis.
-
-4. **Run Model Training**  
-   - Navigate to the `/notebooks/modeling` folder.  
-   - Use the following notebooks or scripts for model training:  
-     - `train_v3.ipynb` for general model training.  
-     - `train_v4.ipynb` for training and testing with separate monthly data.  
-     - `train_v5_1.py` for training a Feedforward Neural Network.  
-     - `train_v5_2.py` for hyperparameter tuning.
 
 ## Instructions for Running the Application  
 
