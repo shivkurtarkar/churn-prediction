@@ -223,13 +223,14 @@ Download and organize the dataset as follows:
      - `train_v5_2.py` for hyperparameter tuning.
 
 ## Instructions For Running application
-
+1. Download Model form release and add it to `services/churn_prediction/api/models`
+2. update the model path in the api against the variable `MODEL_FILE`
 5. **Run API and Frontend**  
    - Navigate to the `/services/churn_prediction` directory:  
-     - `/api`: Contains the API code. Run the API server from here.  
-     - `/test`: Contains unit testing scripts for the API.  
+     - `/api`: Contains the API code. Run the API server from here using `run.sh`.  
+     - `/test`: Contains unit testing scripts for the API. run with command `pytest` from `/services/churn_prediction` directory
    - Navigate to `/services/frontend`:  
-     - Run the Streamlit application to interact with the API.
+     - Run the Streamlit application to interact with the API. Run using `run.sh`
 
 
 ## Model Usage
@@ -290,14 +291,13 @@ Future work could include:
 - [x] The logic for training the model is exported to a separate script  
 
 ## Reproducibility  
-- [ ] It's possible to re-execute the notebook and the training script without errors. The dataset is committed in the project repository or there are clear instructions on how to download the data  
+- [x] It's possible to re-execute the notebook and the training script without errors. The dataset is committed in the project repository or there are clear instructions on how to download the data  
 
 ## Model Deployment  
-- [ ] Model is deployed (with Flask, BentoML or a similar framework)  
+- [x] Model is deployed (with Flask, BentoML or a similar framework)  
 
-## Dependency and Environment Management  
-- [ ] Provided a file with dependencies (requirements.txt, pipfile, bentofile.yaml with dependencies, etc)  
-- [ ] Provided a file with dependencies and used virtual environment. README says how to install the dependencies and how to activate the env  
+## Dependency and Environment Management
+- [x] Provided a file with dependencies and used virtual environment. README says how to install the dependencies and how to activate the env  
 
 ## Containerization  
 - [ ] Dockerfile is provided or a tool that creates a docker image is used (e.g. BentoML)  
