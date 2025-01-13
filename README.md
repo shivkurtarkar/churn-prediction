@@ -232,28 +232,6 @@ Download and organize the dataset as follows:
      - Run the Streamlit application to interact with the API.
 
 
-
-
-
-
-
-
-
-
-4.  **Data Acquisition:**
-
-    *   If using a publicly available dataset, download it and place it in the `data/` directory. The specific download instructions will be in `notebook.ipynb`.
-    *   If using synthetic data, the `notebook.ipynb` will contain the code to generate it and save it to the `data/` directory.
-
-## Project Structure
-
-*   `data/`: Contains the datasets used in the project.
-*   `notebook.ipynb`: Jupyter Notebook containing data preparation, EDA, model training, and evaluation.
-*   `train.py`: Python script for training the final model.
-*   `Dockerfile`: Dockerfile for containerizing the application.
-*   `requirements.txt`: List of Python dependencies.
-*   `README.md`: This file.
-
 ## Model Usage
 
 Instructions on how to run the model for predictions will be provided in the `README.md` within the "Productionizing" and "Deployment" sections.
