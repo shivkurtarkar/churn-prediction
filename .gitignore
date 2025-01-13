@@ -173,7 +173,7 @@ cython_debug/
 
 
 ##
-data
+data/*
 docs
 cp_env
 todo.md
