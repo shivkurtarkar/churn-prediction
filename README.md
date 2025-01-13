@@ -1,24 +1,14 @@
 # Predicting Customer Churn for Music streaming service
 
 ## Index
-- Problem description
-- Data Description
-- Data extraction and challenges
-- Model development
-    - EDA
-    - model evaluation
-- productionization
-    - explaination of architecture
-    - running service
-    - dashboard
-        -   Identifying customers at risk of churning.
-        - Gaining insights into user behavior and churn patterns.
-        - Enabling data-driven decisions to optimize customer retention efforts.
+- Problem Description
+- Dataset Description
+- Data Extraction and Challenges
+- Dataset Setup
+- Dataset Directory
+- Project Directory
+- Instructions
 
-    - monitoring
-- cicd
-    - explaination
-    - instructions
 
 ## Problem Description
 
@@ -82,6 +72,112 @@ The dataset can be downloaded using the following Kaggle command:
 kaggle competitions download -c kkbox-churn-prediction-challenge
 ```
 
+## Dataset Directory
+Download and organize the dataset as follows:
+```
+/data  
+    members_v3.csv  
+    sample_submission_v2.csv  
+    sample_submission_zero.csv  
+    train.csv  
+    train_v2.csv  
+    transactions.csv  
+    transactions_v2.csv  
+    user_logs.csv  
+    user_logs_v2.csv  
+```
+
+## Project Directory
+```
+/notebooks  
+    /eda  
+        eda_dask4.ipynb       # Exploratory Data Analysis notebook  
+    /modeling  
+        train_v3.ipynb        # Model training notebook  
+        train_v4.ipynb        # Notebook with separate training and test data across months  
+        train_v5_1.py         # Feedforward Neural Network model training script  
+        train_v5_2.py         # Hyperparameter tuning script  
+
+/services  
+    /churn_prediction  
+        /api                  # API code for churn prediction  
+        /test                 # API unit testing scripts  
+    /frontend                 # Streamlit application to consume the API  
+```
+
+## Instructions
+
+1. **Prepare the Dataset**  
+   - Download the dataset files listed above and place them in the `/data` directory.
+
+2. **Update File Paths**  
+   - Check and update the file path variables in the notebooks or scripts as needed to ensure they point to the `/data` directory.
+
+3. **Run EDA Notebooks**  
+   - Navigate to the `/notebooks/eda` folder.  
+   - Open and run `eda_dask4.ipynb` for Exploratory Data Analysis.
+
+4. **Run Model Training**  
+   - Navigate to the `/notebooks/modeling` folder.  
+   - Use the following notebooks or scripts for model training:  
+     - `train_v3.ipynb` for general model training.  
+     - `train_v4.ipynb` for training and testing with separate monthly data.  
+     - `train_v5_1.py` for training a Feedforward Neural Network.  
+     - `train_v5_2.py` for hyperparameter tuning.
+
+5. **Run API and Frontend**  
+   - Navigate to the `/services/churn_prediction` directory:  
+     - `/api`: Contains the API code. Run the API server from here.  
+     - `/test`: Contains unit testing scripts for the API.  
+   - Navigate to `/services/frontend`:  
+     - Run the Streamlit application to interact with the API.
+
+
+
+
+
+
+
+
+## instructions for model dev
+
+1. **Create a Virtual Environment**:
+   ```bash
+   python -m venv myenv
+   ```
+   Replace `myenv` with your desired environment name.
+
+2. **Activate the Virtual Environment**:
+   - On Windows:
+     ```bash
+     myenv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     source myenv/bin/activate
+     ```
+
+3. **Install dependecies**:
+   ```bash
+   pip install -r notebooks/requirements.txt
+   ```
+
+4. **Start Jupyter Notebook**:
+   ```bash
+   jupyter notebook
+   ```
+
+
+5. **to register kernel for vscode (optional)**
+   ```bash
+   python -m ipykernel install --user --name=cp_env --display-name "myenv"
+   ```
+---
+
+### Accessing Jupyter:
+- After running the `jupyter notebook` command, a new tab should open in your web browser. If it doesn't, copy the provided URL (including the token) and paste it into your browser.
+
+
 ## Setup & Instructions to Get Data
 
 The following steps outline how to set up the environment and access the data:
@@ -141,3 +237,25 @@ Future work could include:
 *   Implementing real-time churn prediction.
 *   Integrating the model into a production environment.
 *   Deploying the service to the cloud.
+
+
+## TODO
+
+- Problem description
+- Data Description
+- Data extraction and challenges
+- Model development
+    - EDA
+    - model evaluation
+- productionization
+    - explaination of architecture
+    - running service
+    - dashboard
+        -   Identifying customers at risk of churning.
+        - Gaining insights into user behavior and churn patterns.
+        - Enabling data-driven decisions to optimize customer retention efforts.
+
+    - monitoring
+- cicd
+    - explaination
+    - instructions
