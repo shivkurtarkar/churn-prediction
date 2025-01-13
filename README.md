@@ -204,7 +204,8 @@ Download and organize the dataset as follows:
 ## Instructions For EDA and Model dev
 
 1. **Prepare the Dataset**  
-   - Download the dataset files listed above and place them in the `/data` directory.
+   - Download the dataset files listed above and place them in the `/data` directory. 
+   **refer Dataset Setup or KKBOX Churn Prediction Challenge on Kaggle**
 
 2. **Update File Paths**  
    - Check and update the file path variables in the notebooks or scripts as needed to ensure they point to the `/data` directory.
@@ -237,69 +238,7 @@ Download and organize the dataset as follows:
 
 
 
-## instructions for model dev
 
-1. **Create a Virtual Environment**:
-   ```bash
-   python -m venv myenv
-   ```
-   Replace `myenv` with your desired environment name.
-
-2. **Activate the Virtual Environment**:
-   - On Windows:
-     ```bash
-     myenv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source myenv/bin/activate
-     ```
-
-3. **Install dependecies**:
-   ```bash
-   pip install -r notebooks/requirements.txt
-   ```
-
-4. **Start Jupyter Notebook**:
-   ```bash
-   jupyter notebook
-   ```
-
-
-5. **to register kernel for vscode (optional)**
-   ```bash
-   python -m ipykernel install --user --name=cp_env --display-name "myenv"
-   ```
----
-
-### Accessing Jupyter:
-- After running the `jupyter notebook` command, a new tab should open in your web browser. If it doesn't, copy the provided URL (including the token) and paste it into your browser.
-
-
-## Setup & Instructions to Get Data
-
-The following steps outline how to set up the environment and access the data:
-
-1.  **Clone the repository:**
-
-    ```bash
-    git clone [invalid URL removed]
-    cd banking-churn-prediction
-    ```
-
-2.  **Create a virtual environment (recommended):**
-
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    venv\Scripts\activate     # On Windows
-    ```
-
-3.  **Install dependencies:**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
 
 4.  **Data Acquisition:**
 
