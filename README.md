@@ -1,13 +1,41 @@
 # Predicting Customer Churn for Music streaming service
 
 ## Index
-- Problem Description
-- Dataset Description
-- Data Extraction and Challenges
-- Dataset Setup
-- Dataset Directory
-- Project Directory
-- Instructions
+
+- **Project Overview**
+  - Problem Description  
+  - Dataset Description  
+  - Data Extraction and Challenges  
+  - Dataset Setup  
+  - Dataset Directory  
+  - Project Directory  
+
+- **Model Development**
+  - Environment Setup  
+  - Prepare the Dataset  
+  - Exploratory Data Analysis (EDA)  
+  - Train the Model  
+
+- **Instructions**
+  - Running Model Development Scripts  
+  - Running the Application  
+    - Download and Add the Model  
+    - Update the Model Path  
+    - Install Dependencies  
+    - Run API and Frontend  
+      - API  
+      - Testing  
+      - Frontend  
+
+- **Model Usage**  
+
+- **Deliverables**  
+
+- **Future Work**
+  - Further Development  
+  - TODO  
+
+- **Project Evaluation**
 
 
 ## Problem Description
