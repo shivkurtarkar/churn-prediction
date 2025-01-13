@@ -13,7 +13,7 @@
   - [Instructions For EDA and Model Dev](#instructions-for-eda-and-model-dev)
   - [Instructions for Running the Application](#instructions-for-running-the-application)
 
-- [Model Usage](#model-usage)
+- [Model Evaluation](#model-evaluation)
 - [Deliverables](#deliverables)
 - [Further Development](#further-development)
 - [TODO](#todo)
@@ -293,9 +293,46 @@ Download and organize the dataset as follows:
    ```  
 
 
-## Model Usage
+## Model Evaluation
 
-Instructions on how to run the model for predictions will be provided in the `README.md` within the "Productionizing" and "Deployment" sections.
+```
+
+report
+
+-- Mean Baseline -- 
+Train Accuracy: 0.9361
+Train Log Loss: 0.2376
+Test Accuracy: 0.9101
+Test Log Loss: 0.3075
+
+-- Feed Forward Network -- 
+Train Accuracy: 0.9668
+Train Log Loss: 0.0765
+Test Accuracy: 0.9399
+Test Log Loss: 0.3268
+
+-- Decision Tree -- 
+Train Accuracy: 0.0639
+Train Log Loss: 0.0765
+Test Accuracy: 0.0899
+Test Log Loss: 0.3268
+
+-- LightGBM --
+Train Accuracy: 0.9698
+Train Log Loss: 0.0628
+Test Accuracy: 0.9387
+Test Log Loss: 0.3480
+
+-- XGBoost -- 
+Train Accuracy: 0.9694
+Train Log Loss: 0.0689
+Test Accuracy: 0.9396
+Test Log Loss: 0.3430
+
+-- Hyper parameter Tunned LightGBM --
+Train Log Loss: 0.0612
+Test Log Loss: 0.3646
+```
 
 ## Deliverables
 
