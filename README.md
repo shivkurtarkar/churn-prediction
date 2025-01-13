@@ -105,7 +105,103 @@ Download and organize the dataset as follows:
     /frontend                 # Streamlit application to consume the API  
 ```
 
-## Instructions
+# Steps for Running Model Development Scripts
+
+## 1. **Set Up the Environment**
+
+1.1 **Create a Virtual Environment**  
+   Run the following command to create a virtual environment. Replace `myenv` with your desired environment name:  
+   ```bash
+   python -m venv myenv
+   ```
+
+1.2 **Activate the Virtual Environment**  
+   - **On Windows**:  
+     ```bash
+     myenv\Scripts\activate
+     ```  
+   - **On macOS/Linux**:  
+     ```bash
+     source myenv/bin/activate
+     ```
+
+1.3 **Install Dependencies**  
+   Install the required packages by running:  
+   ```bash
+   pip install -r notebooks/requirements.txt
+   ```
+
+1.4 **(Optional) Register Kernel for VS Code**  
+   To register the virtual environment as a Jupyter kernel for VS Code, use:  
+   ```bash
+   python -m ipykernel install --user --name=myenv --display-name "Python (myenv)"
+   ```
+
+---
+
+## 2. **Prepare the Dataset**
+
+2.1 **Download Dataset Files**  
+   Place the required dataset files in the `/data` directory. Ensure all files are correctly named and formatted as per project requirements.  
+
+2.2 **Update File Paths**  
+   Verify and update the file path variables in the notebooks or scripts to point to the `/data` directory.
+
+---
+
+## 3. **Exploratory Data Analysis (EDA)**
+
+3.1 **Navigate to the EDA Folder**  
+   Change to the directory where the EDA notebooks are located:  
+   ```bash
+   cd notebooks/eda
+   ```
+
+3.2 **Run the EDA Notebook**  
+   Open and execute the notebook `eda_dask4.ipynb` to perform Exploratory Data Analysis:  
+   ```bash
+   jupyter notebook eda_dask4.ipynb
+   ```
+
+---
+
+## 4. **Train the Model**
+
+4.1 **Navigate to the Modeling Folder**  
+   Switch to the directory containing the modeling scripts and notebooks:  
+   ```bash
+   cd notebooks/modeling
+   ```
+
+4.2 **Run the Model Training Scripts**  
+   Depending on your requirements, use one of the following options:  
+
+   - **General Model Training**:  
+     Open and run `train_v3.ipynb` for basic model training:  
+     ```bash
+     jupyter notebook train_v3.ipynb
+     ```  
+
+   - **Training with Separate Monthly Data**:  
+     Use `train_v4.ipynb` for training and testing models with monthly data:  
+     ```bash
+     jupyter notebook train_v4.ipynb
+     ```  
+
+   - **Feedforward Neural Network**:  
+     Execute `train_v5_1.py` for training a Feedforward Neural Network:  
+     ```bash
+     python train_v5_1.py
+     ```  
+
+   - **Hyperparameter Tuning**:  
+     Run `train_v5_2.py` for hyperparameter tuning:  
+     ```bash
+     python train_v5_2.py
+     ```
+
+
+## Instructions For EDA and Model dev
 
 1. **Prepare the Dataset**  
    - Download the dataset files listed above and place them in the `/data` directory.
@@ -124,6 +220,8 @@ Download and organize the dataset as follows:
      - `train_v4.ipynb` for training and testing with separate monthly data.  
      - `train_v5_1.py` for training a Feedforward Neural Network.  
      - `train_v5_2.py` for hyperparameter tuning.
+
+## Instructions For Running application
 
 5. **Run API and Frontend**  
    - Navigate to the `/services/churn_prediction` directory:  
