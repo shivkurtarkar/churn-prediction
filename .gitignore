@@ -177,3 +177,5 @@ data
 docs
 cp_env
 todo.md
+
+services/churn_prediction/api/models/*
