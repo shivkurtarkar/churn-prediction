@@ -222,15 +222,62 @@ Download and organize the dataset as follows:
      - `train_v5_1.py` for training a Feedforward Neural Network.  
      - `train_v5_2.py` for hyperparameter tuning.
 
-## Instructions For Running application
-1. Download Model form release and add it to `services/churn_prediction/api/models`
-2. update the model path in the api against the variable `MODEL_FILE`
-5. **Run API and Frontend**  
-   - Navigate to the `/services/churn_prediction` directory:  
-     - `/api`: Contains the API code. Run the API server from here using `run.sh`.  
-     - `/test`: Contains unit testing scripts for the API. run with command `pytest` from `/services/churn_prediction` directory
-   - Navigate to `/services/frontend`:  
-     - Run the Streamlit application to interact with the API. Run using `run.sh`
+## Instructions for Running the Application  
+
+### 1. Download and Add the Model  
+- Download the model file from the release section.  
+- Add the downloaded model file to the following directory:  
+  ```  
+  services/churn_prediction/api/models  
+  ```  
+
+### 2. Update the Model Path  
+- Update the `MODEL_FILE` variable in the API code to point to the path of the downloaded model file.  
+
+### 3. Install Dependencies  
+
+- Install the necessary dependencies for both the API and frontend.  
+  - **For the API**:  
+    Navigate to the `/services/churn_prediction/api` directory and install the dependencies from `requirements.txt`:  
+    ```  
+    cd services/churn_prediction/api  
+    pip install -r requirements.txt  
+    ```  
+  - **For the Frontend**:  
+    Navigate to the `/services/churn_prediction/frontend` directory and install the dependencies from `requirements.txt`:  
+    ```  
+    cd services/churn_prediction/frontend  
+    pip install -r requirements.txt  
+    ```  
+
+### 4. Run API and Frontend  
+
+#### **API**  
+1. Navigate to the API directory:  
+   ```  
+   cd services/churn_prediction/api  
+   ```  
+2. Run the API server using the following script:  
+   ```  
+   ./run.sh  
+   ```  
+
+#### **Testing**  
+- The API testing scripts are located in the `/services/churn_prediction/test` directory.  
+- To run the unit tests, execute the following command from the `services/churn_prediction` directory:  
+  ```  
+  pytest  
+  ```  
+
+#### **Frontend**  
+1. Navigate to the frontend directory:  
+   ```  
+   cd services/frontend  
+   ```  
+2. Run the Streamlit application using the following script:  
+   ```  
+   ./run.sh  
+   ```  
 
 
 ## Model Usage
