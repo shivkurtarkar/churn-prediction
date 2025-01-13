@@ -2,40 +2,25 @@
 
 ## Index
 
-- **Project Overview**
-  - Problem Description  
-  - Dataset Description  
-  - Data Extraction and Challenges  
-  - Dataset Setup  
-  - Dataset Directory  
-  - Project Directory  
+- [Problem Description](#problem-description)
+- [Dataset Description](#dataset-description)
+- [Data Extraction and Challenges](#data-extraction-and-challenges)
+- [Dataset Setup](#dataset-setup)
+- [Dataset Directory](#dataset-directory)
+- [Project Directory](#project-directory)
 
-- **Model Development**
-  - Environment Setup  
-  - Prepare the Dataset  
-  - Exploratory Data Analysis (EDA)  
-  - Train the Model  
+- [Steps for Running Model Development Scripts](#steps-for-running-model-development-scripts)
+  - [Instructions For EDA and Model Dev](#instructions-for-eda-and-model-dev)
+  - [Instructions for Running the Application](#instructions-for-running-the-application)
 
-- **Instructions**
-  - Running Model Development Scripts  
-  - Running the Application  
-    - Download and Add the Model  
-    - Update the Model Path  
-    - Install Dependencies  
-    - Run API and Frontend  
-      - API  
-      - Testing  
-      - Frontend  
+- [Model Usage](#model-usage)
+- [Deliverables](#deliverables)
+- [Further Development](#further-development)
+- [TODO](#todo)
 
-- **Model Usage**  
+- [Project Evaluation](#project-evaluation)
 
-- **Deliverables**  
-
-- **Future Work**
-  - Further Development  
-  - TODO  
-
-- **Project Evaluation**
+---
 
 
 ## Problem Description
