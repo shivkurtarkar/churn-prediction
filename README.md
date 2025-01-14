@@ -359,7 +359,11 @@ Before proceeding with the deployment, ensure that you have the following tools 
    ```
 
 4. **Test the API**
-
+   Wait for both api and frontend to be in running state. 
+   Check using 
+   ```bash
+   kubectl get po
+   ```
    Run integration tests to ensure the API is functioning correctly:
    ```bash
    make dev_api_integation_test
@@ -370,7 +374,7 @@ Before proceeding with the deployment, ensure that you have the following tools 
    http://localhost
    ```
 
-   If you encounter any issues while making predictions, please check the settings for further troubleshooting.
+   If you encounter any issues while making predictions, please check the settings page for further troubleshooting.
 
 6. **Delete the Cluster**
 
