@@ -9,4 +9,4 @@ resources:
 images:
 - name: churn-prediction-frontend
   newName: shivamkurtarkar/churn-prediction-frontend
-  newTag: 59f9119
+  newTag: 6e04481
