@@ -4,6 +4,7 @@ kind: Kustomization
 namePrefix: dev-
 
 resources:
+- ingress.yaml
 - ../../base
 
 # configMapGenerator:
