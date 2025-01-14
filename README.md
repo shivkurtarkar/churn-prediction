@@ -391,10 +391,12 @@ Before proceeding with the deployment, ensure that you have the following tools 
 
 Future work could include:
 
-*   Exploring more advanced machine learning models.
-*   Implementing real-time churn prediction.
-*   Integrating the model into a production environment.
-*   Deploying the service to the cloud.
+* Tunning machine learning models
+* Exploring more advanced machine learning models.
+* Model explaination
+* Model monitoring 
+* CICD pipeline
+
 
 
 # Project Evaluation  
