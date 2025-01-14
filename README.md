@@ -223,7 +223,7 @@ Download and organize the dataset as follows:
   ```  
 
 ### 2. Update the Model Path  
-- Update the `MODEL_FILE` variable in the API code to point to the path of the downloaded model file.  
+- Update the `MODEL_FILE` variable in the API code `services/churn_prediction/api/api.py` to point to the path of the downloaded model file.  
 
 ### 3.1 Using Docker compose
 #### 3.1.1. Run docker compose
