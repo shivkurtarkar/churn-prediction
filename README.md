@@ -359,6 +359,7 @@ Before proceeding with the deployment, ensure that you have the following tools 
    ```
 
 4. **Test the API**
+
    Wait for both api and frontend to be in running state. 
    Check using 
    ```bash
