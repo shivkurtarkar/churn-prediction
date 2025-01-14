@@ -15,4 +15,4 @@ configMapGenerator:
 images:
 - name: churn-prediction-frontend
   newName: shivamkurtarkar/churn-prediction-frontend
-  newTag: ba12cbc
+  newTag: a094fae
