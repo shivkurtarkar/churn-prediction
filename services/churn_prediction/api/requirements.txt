@@ -4,3 +4,4 @@ joblib
 numpy
 
 uvicorn
+scikit-learn
