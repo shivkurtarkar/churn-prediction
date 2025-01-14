@@ -5,9 +5,10 @@ metadata:
   labels:
     app: churn-api
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
     - port: 8000
       targetPort: 8000
+      nodePort: 30007
   selector:
     app: churn-api
