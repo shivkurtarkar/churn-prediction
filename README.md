@@ -383,7 +383,7 @@ Before proceeding with the deployment, ensure that you have the following tools 
    ```bash
    make kind-delete
    ```
-#### Deployment Steps
+#### Development Steps
 - [TODO]: how to build images and update manifest using make commands
 
 
