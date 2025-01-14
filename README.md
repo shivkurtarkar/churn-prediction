@@ -372,9 +372,9 @@ Before proceeding with the deployment, ensure that you have the following tools 
    ```
 5. **Access the Application**
    After deployment, you can access the application at:
-   ```text
-   http://localhost
-   ```
+   
+   [http://localhost](http://localhost)
+   
 
    If you encounter any issues while making predictions, please check the settings page for further troubleshooting.
 
