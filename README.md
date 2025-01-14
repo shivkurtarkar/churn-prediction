@@ -359,8 +359,7 @@ Future work could include:
 - [x] Provided a file with dependencies and used virtual environment. README says how to install the dependencies and how to activate the env  
 
 ## Containerization  
-- [ ] Dockerfile is provided or a tool that creates a docker image is used (e.g. BentoML)  
-- [ ] The application is containerized and the README describes how to build a container and how to run it  
+- [x] The application is containerized and the README describes how to build a container and how to run it  
 
 ## Cloud Deployment  
 - [ ] Docs describe clearly (with code) how to deploy the service to cloud or Kubernetes cluster (local or remote)  
