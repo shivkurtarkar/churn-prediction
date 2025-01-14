@@ -181,4 +181,6 @@ todo.md
 services/churn_prediction/api/models/*
 *.csv
 *.joblib
-output
+output/*
+
+tmp
