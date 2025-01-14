@@ -22,7 +22,7 @@ CHURN_PREDICTION_API=churn-prediction-api
 CHURN_PREDICTION_FRONTEND=churn-prediction-frontend
 
 # Docker build and push targets
-.PHONE: build
+.PHONY: build
 build: DOCKER_IMAGE_NAME=$(REGISTRY_NAME)/$(IMAGE_NAME)
 build:	
 	@echo "Building Docker image.."
@@ -61,10 +61,12 @@ update_manifest:
 
 	
 
-# # Kubernetes deployment targets
-# deploy:
-# 	@echo "Applying Kubernetes manifests..."
-# 	kubectl apply -k $(K8S_CONFIG_PATH)
+# Kubernetes deployment targets
+.PHONY: deploy
+deploy:
+	@echo "Applying Kubernetes manifests..."
+	@echo $(MANIFESTS_DIR)/overlays/$(DEPLOYMENT_ENV) 
+	kubectl apply -k $(MANIFESTS_DIR)/overlays/$(DEPLOYMENT_ENV) 
 
 # undeploy:
 # 	@echo "Undeploying Kubernetes manifests..."
@@ -109,7 +111,7 @@ frontend_build: build
 frontend_run: IMAGE_NAME=$(CHURN_PREDICTION_FRONTEND)
 frontend_run: run
 
-frontend_push: IMAGE_NAME=$(CHURN_PREDICTION_API)
+frontend_push: IMAGE_NAME=$(CHURN_PREDICTION_FRONTEND)
 frontend_push: push
 
 
@@ -132,6 +134,33 @@ dev_frontend_update_manifest: frontend_update_manifest
 
 prod_frontend_update_manifest: DEPLOYMENT_ENV=prod
 prod_frontend_update_manifest: frontend_update_manifest
+
+
+api_deploy: MANIFESTS_DIR=manifest/api
+api_deploy: deploy
+
+dev_api_deploy: DEPLOYMENT_ENV=dev
+dev_api_deploy: api_deploy
+
+prod_api_deploy: DEPLOYMENT_ENV=prod
+prod_api_deploy: api_deploy
+
+dev_api_all: api_build api_push dev_api_update_manifest dev_api_deploy
+prod_api_all: api_build api_push prod_api_update_manifest prod_api_deploy
+
+
+
+frontend_deploy: MANIFESTS_DIR=manifest/frontend
+frontend_deploy: deploy
+
+dev_frontend_deploy: DEPLOYMENT_ENV=dev
+dev_frontend_deploy: api_deploy
+
+prod_frontend_deploy: DEPLOYMENT_ENV=prod
+prod_frontend_deploy: api_deploy
+
+dev_frontend_all: frontend_build frontend_push dev_frontend_update_manifest dev_frontend_deploy
+prod_frontend_all: frontend_build frontend_push prod_frontend_update_manifest prod_frontend_deploy
 
 
 
