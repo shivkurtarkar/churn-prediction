@@ -225,7 +225,7 @@ Download and organize the dataset as follows:
 ### 2. Update the Model Path  
 - Update the `MODEL_FILE` variable in the API code to point to the path of the downloaded model file.  
 
-### 3. Using Docker compose
+### 3.1 Using Docker compose
 #### 3.1.1. Run docker compose
 Install docker and docker compose
 
@@ -233,7 +233,7 @@ Install docker and docker compose
 ```bash
 docker-compose up
 ```
-
+### 3.2 Running directly
 #### 3.2.1. Install Dependencies  
 
 - Install the necessary dependencies for both the API and frontend.  
