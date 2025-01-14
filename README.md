@@ -224,8 +224,14 @@ Download and organize the dataset as follows:
 
 ### 2. Update the Model Path  
 - Update the `MODEL_FILE` variable in the API code `services/churn_prediction/api/api.py` to point to the path of the downloaded model file.  
+### 3. Running the application
 
-### 3.1 Using Docker compose
+This project provides 3 ways of running the applicaiton
+1. using docker compose
+2. using python virtual env
+3. kubernete using kind (refer to [Docker Kubernetes Deployment](#docker-kubernetes-deployment))
+
+#### 3.1 Using Docker compose
 #### 3.1.1. Run docker compose
 Install docker and docker compose
 
@@ -233,7 +239,7 @@ Install docker and docker compose
 ```bash
 docker-compose up
 ```
-### 3.2 Running directly
+#### 3.2 Running directly
 #### 3.2.1. Install Dependencies  
 
 - Install the necessary dependencies for both the API and frontend.  
