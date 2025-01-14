@@ -4,8 +4,8 @@ kind: Kustomization
 namePrefix: dev-
 
 resources:
-- ingress.yaml
 - ../../base
+# - ingress.yaml
 
 # configMapGenerator:
 #   - name: model-configmap
@@ -15,4 +15,4 @@ resources:
 images:
 - name: churn-prediction-api
   newName: shivamkurtarkar/churn-prediction-api
-  newTag: 708d026
+  newTag: ba12cbc
