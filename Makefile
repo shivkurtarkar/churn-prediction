@@ -162,7 +162,18 @@ prod_frontend_deploy: frontend_deploy
 dev_frontend_all: frontend_build frontend_push dev_frontend_update_manifest dev_frontend_deploy
 prod_frontend_all: frontend_build frontend_push prod_frontend_update_manifest prod_frontend_deploy
 
+kind-init:
+	kind create cluster --config kind.config
+	sleep 5
+	kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/deploy-ingress-nginx.yaml
+	sleep 30
+	kubectl wait --namespace ingress-nginx \
+	--for=condition=ready pod \
+	--selector=app.kubernetes.io/component=controller \
+	--timeout=90s
 
+kind-delete:
+	kind delete cluster
 
 # Help command to display available targets
 help:
