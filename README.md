@@ -366,6 +366,7 @@ Before proceeding with the deployment, ensure that you have the following tools 
    kubectl get po
    ```
    Run integration tests to ensure the API is functioning correctly:
+   (make sure virtul env is active and pytest is installed)
    ```bash
    make dev_api_integation_test
    ```
