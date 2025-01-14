@@ -237,18 +237,18 @@ docker-compose up
 #### 3.2.1. Install Dependencies  
 
 - Install the necessary dependencies for both the API and frontend.  
-  - **For the API**:  
-    Navigate to the `/services/churn_prediction/api` directory and install the dependencies from `requirements.txt`:  
-    ```  
-    cd services/churn_prediction/api  
-    pip install -r requirements.txt  
-    ```  
-  - **For the Frontend**:  
-    Navigate to the `/services/churn_prediction/frontend` directory and install the dependencies from `requirements.txt`:  
-    ```  
-    cd services/churn_prediction/frontend  
-    pip install -r requirements.txt  
-    ```  
+- **For the API**:  
+   Navigate to the `/services/churn_prediction/api` directory and install the dependencies from `requirements.txt`:  
+   ```  
+   cd services/churn_prediction/api  
+   pip install -r requirements.txt  
+   ```  
+- **For the Frontend**:  
+   Navigate to the `/services/churn_prediction/frontend` directory and install the dependencies from `requirements.txt`:  
+   ```  
+   cd services/churn_prediction/frontend  
+   pip install -r requirements.txt  
+   ```  
 
 #### 3.2.2. Run API and Frontend  
 
