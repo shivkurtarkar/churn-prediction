@@ -278,7 +278,9 @@ docker-compose up
    ```  
    ./run.sh  
    ```  
-
+## Running application
+![Predicted as User will Churn](images/churn_prediction_1.png)
+![Predicted as User will not Churn](images/churn_prediction_0.png)
 
 ## Model Evaluation
 
