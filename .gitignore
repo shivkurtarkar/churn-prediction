@@ -184,3 +184,5 @@ services/churn_prediction/api/models/*
 output/*
 
 tmp
+tree.txt
+TODO.md
