@@ -4,7 +4,7 @@ kind: Kustomization
 namePrefix: prod-
 
 resources:
-  - ../../base
+- ../../base
 
 # configMapGenerator:
 #   - name: model-configmap
@@ -12,5 +12,6 @@ resources:
 #       - nn_model.joblib=../../api/nn_model.joblib
 
 images:
-  - name: churn-api-image
-    newTag: latest
+- name: churn-prediction-api
+  newName: shivamkurtarkar/churn-prediction-api
+  newTag: 8101b6e

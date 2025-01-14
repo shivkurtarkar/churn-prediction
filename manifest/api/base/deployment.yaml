@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: churn-api
-          image: churn-api-image
+          image: churn-prediction-api
           # env:
           #   - name: UVICORN_HOST
           #     value: "0.0.0.0"
