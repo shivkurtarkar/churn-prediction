@@ -12,8 +12,8 @@ st.title("Churn Prediction")
 st.header("Settings")
 
 # Create a button to check API health
-check_api_button = st.button("Check API Health")
 st.text_input("Churn Prediction API Endpoint", value=API_URL, disabled=True)
+check_api_button = st.button("Check API Health")
 # Function to check API health
 def check_api_health():
     try:
