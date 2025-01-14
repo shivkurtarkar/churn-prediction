@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: services/churn_prediction
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"  # Maps FastAPI service to port 8000 on the host
+    # volumes:
+    #   - ./api:/app/api  # Mounts the API code for live updates
+    #   - ./api/nn_model.joblib:/app/nn_model.joblib  # Mounts the model file
+
+  # test:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   command: pytest tests/
+  #   volumes:
+  #     - ./tests:/app/tests  # Mounts the test directory
+  #     - ./api:/app/api  # Mounts the API directory
+
+  frontend:
+    build:
+      context: services/frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    # volumes:
+    #   - ./tests:/app/tests  # Mounts the test directory
+    #   - ./api:/app/api  # Mounts the API directory

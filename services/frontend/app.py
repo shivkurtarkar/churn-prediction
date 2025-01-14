@@ -1,8 +1,9 @@
 import streamlit as st
 import requests
+import os
 
 # Set API endpoint
-API_URL = "http://localhost:8000/predict"
+API_URL = os.environ.get("API_URL", "http://localhost:8000")
 
 # Streamlit app title
 st.title("Churn Prediction")
@@ -48,7 +49,7 @@ if st.button("Predict Churn"):
     
     # Make API request
     try:
-        response = requests.post(API_URL, json=payload)
+        response = requests.post(f"{API_URL}/predict", json=payload)
         response_data = response.json()
         
         # Display prediction result
