@@ -101,20 +101,36 @@ Download and organize the dataset as follows:
 
 ## Project Directory
 ```
-/notebooks  
-    /eda  
-        eda_dask4.ipynb       # Exploratory Data Analysis notebook  
-    /modeling  
-        train_v3.ipynb        # Model training notebook  
-        train_v4.ipynb        # Notebook with separate training and test data across months  
-        train_v5_1.py         # Feedforward Neural Network model training script  
-        train_v5_2.py         # Hyperparameter tuning script  
-
-/services  
-    /churn_prediction  
-        /api                  # API code for churn prediction  
-        /test                 # API unit testing scripts  
-    /frontend                 # Streamlit application to consume the API  
+├── data                      # contains data
+├── notebooks
+│   ├── eda
+│   │   ├── eda_dask4.ipynb   # Exploratory Data Analysis notebook  
+│   ├── modeling
+│   │   ├── train_v3.ipynb    # Model training notebook  
+│   │   ├── train_v4.ipynb    # Notebook with separate training and 
+│   │   ├── train_v5_1.py     # Feedforward Neural Network model 
+│   │   ├── train_v5_2.py     # Hyperparameter tuning script  
+│   └── requirements.txt
+├── output                    # output of model training script is saved here
+├── services
+│   ├── churn_prediction
+│   │   ├── api
+│   │   │   ├── api.py
+│   │   │   ├── models        # dir for models for deployment
+│   │   │   │   └── FeedforwardNN_model.joblib  # add from release
+│   │   │   ├── requirements.txt
+│   │   │   └── run.sh        # script for running using python env
+│   │   ├── Dockerfile
+│   │   ├── integration       # Integration test scripts
+│   │   └── tests             # API unit testing scripts  
+│   └── frontend              # Streamlit application to consume the 
+├── docker-compose.yaml       # docker compose file
+├── kind.config               # kind config
+├── Makefile                  # make file
+├── manifest                  # dir contains kubernetes manifest
+│   ├── api
+│   └── frontend
+├── README.md
 ```
 
 ## Steps for Running Model Development Scripts
