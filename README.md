@@ -365,5 +365,5 @@ Future work could include:
 
 ## Cloud Deployment  
 - [ ] Docs describe clearly (with code) how to deploy the service to cloud or Kubernetes cluster (local or remote)  
-- [ ] There's code for deployment to cloud or Kubernetes cluster (local or remote). There's a URL for testing - or video/screenshot of testing it  
+- [x] There's code for deployment to cloud or Kubernetes cluster (local or remote). There's a URL for testing - or video/screenshot of testing it  
 ```
