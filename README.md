@@ -225,7 +225,16 @@ Download and organize the dataset as follows:
 ### 2. Update the Model Path  
 - Update the `MODEL_FILE` variable in the API code to point to the path of the downloaded model file.  
 
-### 3. Install Dependencies  
+### 3. Using Docker compose
+#### 3.1.1. Run docker compose
+Install docker and docker compose
+
+#### 3.1.2. Run docker compose
+```bash
+docker-compose up
+```
+
+#### 3.2.1. Install Dependencies  
 
 - Install the necessary dependencies for both the API and frontend.  
   - **For the API**:  
@@ -241,9 +250,9 @@ Download and organize the dataset as follows:
     pip install -r requirements.txt  
     ```  
 
-### 4. Run API and Frontend  
+#### 3.2.2. Run API and Frontend  
 
-#### **API**  
+##### **API**  
 1. Navigate to the API directory:  
    ```  
    cd services/churn_prediction/api  
@@ -253,14 +262,14 @@ Download and organize the dataset as follows:
    ./run.sh  
    ```  
 
-#### **Testing**  
+##### **Testing**  
 - The API testing scripts are located in the `/services/churn_prediction/test` directory.  
 - To run the unit tests, execute the following command from the `services/churn_prediction` directory:  
   ```  
   pytest  
   ```  
 
-#### **Frontend**  
+##### **Frontend**  
 1. Navigate to the frontend directory:  
    ```  
    cd services/frontend  
