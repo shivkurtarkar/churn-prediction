@@ -325,7 +325,63 @@ Test Log Loss: 0.3646
 
 ## Docker Kubernetes Deployment
 
-- [TODO]
+### Deployment
+
+To deploy the application using Docker and Kubernetes, follow the steps below:
+
+#### Prerequisites
+
+Before proceeding with the deployment, ensure that you have the following tools installed:
+
+- [Docker](https://www.docker.com/)
+- [Kind](https://kind.sigs.k8s.io/) (Kubernetes in Docker)
+- [make]
+#### Deployment Steps
+
+1. **Install Required Tools**
+
+   Make sure you have Docker and Kind installed on your machine.
+
+2. **Initialize Kind Cluster**
+
+   Run the following command to initialize the Kind cluster:
+
+   ```bash
+   make kind-init
+   ```
+
+3. **Deploy All Development Services**
+
+   Deploy all the necessary development services by executing the following command:
+
+   ```bash
+   make dev_deploy_all
+   ```
+
+4. **Test the API**
+
+   Run integration tests to ensure the API is functioning correctly:
+   ```bash
+   make dev_api_integation_test
+   ```
+5. **Access the Application**
+   After deployment, you can access the application at:
+   ```text
+   http://localhost
+   ```
+
+   If you encounter any issues while making predictions, please check the settings for further troubleshooting.
+
+6. **Delete the Cluster**
+
+   To delete the Kind cluster and clean up resources, run:
+
+   ```bash
+   make kind-delete
+   ```
+#### Deployment Steps
+- [TODO]: how to build images and update manifest using make commands
+
 
 ## Further Development
 
