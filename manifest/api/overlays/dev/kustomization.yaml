@@ -14,4 +14,4 @@ resources:
 images:
 - name: churn-prediction-api
   newName: shivamkurtarkar/churn-prediction-api
-  newTag: 8101b6e
+  newTag: 1daeb33
