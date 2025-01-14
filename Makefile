@@ -145,8 +145,8 @@ dev_api_deploy: api_deploy
 prod_api_deploy: DEPLOYMENT_ENV=prod
 prod_api_deploy: api_deploy
 
-dev_api_all: api_build api_push dev_api_update_manifest dev_api_deploy
-prod_api_all: api_build api_push prod_api_update_manifest prod_api_deploy
+dev_api_full_build: api_build api_push dev_api_update_manifest dev_api_deploy
+prod_api_full_build: api_build api_push prod_api_update_manifest prod_api_deploy
 
 
 
@@ -159,10 +159,11 @@ dev_frontend_deploy: frontend_deploy
 prod_frontend_deploy: DEPLOYMENT_ENV=prod
 prod_frontend_deploy: frontend_deploy
 
-dev_frontend_all: frontend_build frontend_push dev_frontend_update_manifest dev_frontend_deploy
-prod_frontend_all: frontend_build frontend_push prod_frontend_update_manifest prod_frontend_deploy
+dev_frontend_full_build: frontend_build frontend_push dev_frontend_update_manifest dev_frontend_deploy
+prod_frontend_full_build: frontend_build frontend_push prod_frontend_update_manifest prod_frontend_deploy
 
-dev_deploy_all: dev_api_all dev_frontend_all
+dev_deploy_all: dev_api_deploy 
+dev_deploy_all: dev_frontend_deploy
 
 dev_api_integation_test:
 	@echo ""
