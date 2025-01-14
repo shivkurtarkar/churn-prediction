@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namePrefix: prod-
+
+resources:
+  - ../../base
+
+# configMapGenerator:
+#   - name: model-configmap
+#     files:
+#       - nn_model.joblib=../../api/nn_model.joblib
+
+images:
+  - name: churn-api-image
+    newTag: latest
