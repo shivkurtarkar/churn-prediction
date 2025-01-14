@@ -162,6 +162,16 @@ prod_frontend_deploy: frontend_deploy
 dev_frontend_all: frontend_build frontend_push dev_frontend_update_manifest dev_frontend_deploy
 prod_frontend_all: frontend_build frontend_push prod_frontend_update_manifest prod_frontend_deploy
 
+dev_deploy_all: dev_api_all dev_frontend_all
+
+dev_api_integation_test:
+	@echo ""
+	@echo "**Note******"
+	@echo "Make sure virtual env is active and pytest is installed"
+	@echo ""
+	@cd services/churn_prediction/integration/ && \
+	pytest
+
 kind-init:
 	kind create cluster --config kind.config
 	sleep 5
