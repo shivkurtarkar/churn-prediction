@@ -5,7 +5,7 @@ metadata:
   labels:
     app: churn-frontend
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - port: 8501
       targetPort: 8501

@@ -17,11 +17,17 @@ spec:
       containers:
         - name: churn-frontend
           image: churn-prediction-frontend
+          envFrom:
+          - configMapRef:
+              name: churn-frontend-config
           # env:
-          #   - name: UVICORN_HOST
-          #     value: "0.0.0.0"
-          #   - name: UVICORN_PORT
-          #     value: "8000"
+          # #     - name: API_URL
+          # #       value: churn-api.default.svc
+          # - name: API_URL
+          #   valueFrom:
+          #     configMapKeyRef:
+          #       name: churn-frontend-config
+          #       key: API_URL
           ports:
             - containerPort: 8501
           resources:

@@ -5,8 +5,14 @@ namePrefix: dev-
 
 resources:
 - ../../base
+- ingress.yaml
+
+configMapGenerator:
+- literals:
+  - API_URL=http://dev-churn-api:8000
+  name: churn-frontend-config
 
 images:
 - name: churn-prediction-frontend
   newName: shivamkurtarkar/churn-prediction-frontend
-  newTag: 708d026
+  newTag: ba12cbc

@@ -5,10 +5,15 @@ namePrefix: prod-
 
 resources:
 - ../../base
+- ingress.yaml
+
+configMapGenerator:
+  - name: churn-frontend-config
+    literals:
+      - API_URL=prod-churn-api
 
 images:
 - name: churn-prediction-frontend
   newName: shivamkurtarkar/churn-prediction-frontend
   newTag: 8101b6e
-
 
