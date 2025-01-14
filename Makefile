@@ -154,10 +154,10 @@ frontend_deploy: MANIFESTS_DIR=manifest/frontend
 frontend_deploy: deploy
 
 dev_frontend_deploy: DEPLOYMENT_ENV=dev
-dev_frontend_deploy: api_deploy
+dev_frontend_deploy: frontend_deploy
 
 prod_frontend_deploy: DEPLOYMENT_ENV=prod
-prod_frontend_deploy: api_deploy
+prod_frontend_deploy: frontend_deploy
 
 dev_frontend_all: frontend_build frontend_push dev_frontend_update_manifest dev_frontend_deploy
 prod_frontend_all: frontend_build frontend_push prod_frontend_update_manifest prod_frontend_deploy
