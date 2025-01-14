@@ -30,6 +30,14 @@ class PredictionRequest(BaseModel):
     registered_via: int
     registration_init_time: int
 
+
+# Health check endpoint
+@app.get("/health")
+async def health_check():
+    """Endpoint to check if the API is running."""
+    return {"status": "ok", "message": "API is running"}
+
+
 @app.post("/predict")
 def predict(data: PredictionRequest):
     # Convert input data to NumPy array
