@@ -420,6 +420,6 @@ Future work could include:
 - [x] The application is containerized and the README describes how to build a container and how to run it  
 
 ## Cloud Deployment  
-- [ ] Docs describe clearly (with code) how to deploy the service to cloud or Kubernetes cluster (local or remote)  
+- [x] Docs describe clearly (with code) how to deploy the service to cloud or Kubernetes cluster (local or remote)  
 - [x] There's code for deployment to cloud or Kubernetes cluster (local or remote). There's a URL for testing - or video/screenshot of testing it  
 ```
