@@ -371,11 +371,9 @@ Before proceeding with the deployment, ensure that you have the following tools 
    make dev_api_integation_test
    ```
 5. **Access the Application**
-   After deployment, you can access the application at:
-   
-   [http://localhost](http://localhost)
-   
 
+   After deployment, you can access the application at: [http://localhost](http://localhost)
+   
    If you encounter any issues while making predictions, please check the settings page for further troubleshooting.
 
 6. **Delete the Cluster**
