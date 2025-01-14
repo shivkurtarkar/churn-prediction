@@ -18,6 +18,8 @@ IMAGE_TAG ?= $(shell git rev-parse --short HEAD)
 K8S_NAMESPACE=churn-api-dev
 K8S_CONFIG_PATH=k8s/overlays/dev
 
+CHURN_PREDICTION_API=churn-prediction-api
+CHURN_PREDICTION_FRONTEND=churn-prediction-frontend
 
 # Docker build and push targets
 .PHONE: build
@@ -52,9 +54,10 @@ update_manifest:
 # docker tag image_name registry_name/fullanme
 # docker push registry_name/fullanme
 	@echo "updating manifests..."
-	@echo $(MANIFESTS_DIR)/overlays/$(DEPLOYMENT_ENV)
-	@cd $(MANIFESTS_DIR)/overlays/$(DEPLOYMENT_ENV)
-	@kustomize edit set image "$(IMAGE_NAME)=$(DOCKER_IMAGE_NAME):$(IMAGE_TAG)"
+	@echo $(MANIFESTS_DIR)/overlays/$(DEPLOYMENT_ENV) 
+	@echo "$(IMAGE_NAME)=$(DOCKER_IMAGE_NAME):$(IMAGE_TAG)"
+	@cd $(MANIFESTS_DIR)/overlays/$(DEPLOYMENT_ENV) && \
+	kustomize edit set image "$(IMAGE_NAME)=$(DOCKER_IMAGE_NAME):$(IMAGE_TAG)"
 
 	
 
@@ -88,35 +91,49 @@ build-test-deploy: build push test deploy
 ## 
 
 
-api_build: IMAGE_NAME=api
+api_build: IMAGE_NAME=$(CHURN_PREDICTION_API)
 api_build: SERVICE_DIR=services/churn_prediction/
 api_build: build
 
-api_run: IMAGE_NAME=api
+api_run: IMAGE_NAME=$(CHURN_PREDICTION_API)
 api_run: run
 
-api_push: IMAGE_NAME=api
+api_push: IMAGE_NAME=$(CHURN_PREDICTION_API)
 api_push: push
 
-frontend_build: IMAGE_NAME=frontend
+
+frontend_build: IMAGE_NAME=$(CHURN_PREDICTION_FRONTEND)
 frontend_build: SERVICE_DIR=services/frontend/
 frontend_build: build
 
-frontend_run: IMAGE_NAME=frontend
+frontend_run: IMAGE_NAME=$(CHURN_PREDICTION_FRONTEND)
 frontend_run: run
 
-frontend_push: IMAGE_NAME=api
+frontend_push: IMAGE_NAME=$(CHURN_PREDICTION_API)
 frontend_push: push
 
 
-api_update_manifest: MANIFESTS_DIR=manifest
+api_update_manifest: MANIFESTS_DIR=manifest/api
+api_update_manifest: IMAGE_NAME=$(CHURN_PREDICTION_API)
 api_update_manifest: update_manifest
 
 dev_api_update_manifest: DEPLOYMENT_ENV=dev
 dev_api_update_manifest: api_update_manifest
 
-prod_api_update_manifest: DEPLOYMENT_ENV=dev
+prod_api_update_manifest: DEPLOYMENT_ENV=prod
 prod_api_update_manifest: api_update_manifest
+
+frontend_update_manifest: MANIFESTS_DIR=manifest/frontend
+frontend_update_manifest: IMAGE_NAME=$(CHURN_PREDICTION_FRONTEND)
+frontend_update_manifest: update_manifest
+
+dev_frontend_update_manifest: DEPLOYMENT_ENV=dev
+dev_frontend_update_manifest: frontend_update_manifest
+
+prod_frontend_update_manifest: DEPLOYMENT_ENV=prod
+prod_frontend_update_manifest: frontend_update_manifest
+
+
 
 # Help command to display available targets
 help:
