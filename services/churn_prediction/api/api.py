@@ -4,9 +4,9 @@ import joblib
 import numpy as np
 
 # Load the model
-OUTPUT_DIR='../../../output'
+OUTPUT_DIR='models'
+MODEL_FILE = f"{OUTPUT_DIR}/FeedforwardNN_model.joblib"
 
-MODEL_FILE = f"{OUTPUT_DIR}/nn_model.joblib"
 model = joblib.load(MODEL_FILE)
 
 # Define the FastAPI app
